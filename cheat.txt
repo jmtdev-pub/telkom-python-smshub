@@ -27,6 +27,7 @@ Setup Service
     sudo systemctl enable python-smshub.service
     sudo systemctl start python-smshub.service
     sudo systemctl status python-smshub.service
+    sudo systemctl restart python-smshub.service
 
 
 
