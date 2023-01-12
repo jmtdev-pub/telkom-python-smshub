@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn Web Server as Unit Service Systemd
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/tmcc/python-smshub
+Environment="PATH=/var/www/tmcc/env/bin"
+ExecStart=/var/www/tmcc/env/bin/python3 sms_client.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,37 @@
+Install Python Stuff
+    #sudo apt install -y python3-venv
+    apt install python3-pip
+    cd /var/www/tmcc
+    sudo python3 -m venv env
+    sudo chmod -R 0777 env
+
+
+
+    cd /var/www/tmcc
+    source env/bin/activate
+    pip install --upgrade pip
+    pip install -r python-smshub/requirements.txt
+    deactivate
+
+
+
+    source env/bin/activate
+    cd python-smshub
+    deactivate
+
+
+
+Setup Service
+    sudo nano /etc/systemd/system/python-smshub.service    
+    sudo systemctl daemon-reload
+    sudo systemctl enable python-smshub.service
+    sudo systemctl start python-smshub.service
+    sudo systemctl status python-smshub.service
+
+
+
+sudo tail -f /var/www/tmcc/python-smshub/log.txt
+
+
+
+
