@@ -52,8 +52,6 @@ def onrec(pdu):
 
     except Exception as e:
         logging.info(str(e))
-        
-
 
 logging.info("Start")
 client.set_message_sent_handler(onsend)
